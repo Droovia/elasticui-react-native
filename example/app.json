@@ -1,0 +1,22 @@
+{
+  "name": "@elasticui/react-native-example",
+  "displayName": "ReactNative Example",
+  "expo": {
+    "name": "@elasticui/react-native-example",
+    "slug": "elasticui-react-native-example",
+    "description": "Example app for @elasticui/react-native",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
