@@ -1,2 +1,4 @@
-// @ts-ignore
-export { ThemeProvider, withTheme, useTheme, makeStyle } from './Context';
+export { ThemeProvider } from './ThemeProvider';
+export { withTheme } from './withTheme';
+export { useTheme } from './useTheme';
+export { makeStyles } from './makeStyles';

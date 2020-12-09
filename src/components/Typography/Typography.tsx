@@ -13,6 +13,7 @@ type Props = React.ComponentProps<typeof NativeText> & {
 
 function Typography(props: Props) {
   const {
+    //@ts-ignore
     theme,
     children,
     style,
@@ -32,6 +33,7 @@ function Typography(props: Props) {
   return <NativeText style={[styling, style]}>{children}</NativeText>;
 }
 
+//@ts-ignore
 export default withTheme(Typography) as typeof Typography;
 
 // TODO:
