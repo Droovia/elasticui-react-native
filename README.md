@@ -2,21 +2,22 @@
 
 React Native Elastic UI
 
-## Installation
+# Elements
 
-```sh
-npm install @elasticui/react-native
-```
-
-## Usage
-
-```js
-import ReactNative from "@elasticui/react-native";
-
-// ...
-
-const result = await ReactNative.multiply(3, 7);
-```
+- Theme ✅
+- Typography ✅
+- Button 🏃‍♂️
+- Input 🚶‍♂️
+- Drawer 🕑
+- Switch 🕑
+- Checkbox 🕑
+- Radio 🕑
+- Toast 🕑
+- Snackbar 🕑
+- Dialog 🕑
+- Bottom Sheet 🤔
+- Slider 🕑
+- Icons 🤔
 
 ## Contributing
 
