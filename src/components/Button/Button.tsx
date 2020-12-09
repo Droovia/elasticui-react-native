@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {
-  TouchableOpacity,
   TouchableNativeFeedback,
   Text,
   View,
@@ -12,9 +11,7 @@ import {
 
 import { withTheme } from '../../theme';
 
-type Props = React.ComponentProps<
-  typeof TouchableOpacity | typeof TouchableNativeFeedback
-> & {
+type Props = React.ComponentProps<typeof TouchableNativeFeedback> & {
   children: React.ReactNode;
   styles?: {
     container?: StyleProp<ViewStyle>;
@@ -25,14 +22,14 @@ type Props = React.ComponentProps<
   color?: 'primary' | 'secondary' | 'success' | 'warn' | 'error';
   size?: 'medium' | 'small' | 'large';
   shape?: 'curve' | 'round' | 'plate';
-  disabled?: Boolean;
-  loading?: Boolean;
-  wide?: Boolean;
+  disabled?: boolean;
+  loading?: boolean;
+  wide?: boolean;
 };
 
 function Button(props: Props) {
   const {
-    // @ts-ignore
+    //@ts-ignore
     theme,
     children,
     styles,
@@ -46,18 +43,14 @@ function Button(props: Props) {
     ...rest
   } = props;
 
-  const buttonStyles = theme.component.Button.styles;
-  const buttonVariant = theme.component.Button.variant[variant];
-  const buttonSize = theme.component.Button.size[size];
-  console.log(
-    '🚀 ~ file: Button.tsx ~ line 50 ~ Button ~ buttonSize',
-    typeof buttonSize.indicator.size
-  );
-  const buttonShape = theme.component.Button.shape[shape];
-  const buttonColor = theme.component.Button.color[color];
+  const buttonStyles = theme.components.Button.styles;
+  const buttonVariant = theme.components.Button.variant[variant];
+  const buttonSize = theme.components.Button.size[size];
+  const buttonShape = theme.components.Button.shape[shape];
+  const buttonColor = theme.components.Button.color[color];
 
-  const Touchable: typeof TouchableOpacity | typeof TouchableNativeFeedback =
-    variant === 'transparent' ? TouchableOpacity : TouchableNativeFeedback;
+  // const Touchable: typeof TouchableOpacity | typeof TouchableNativeFeedback =
+  //   variant === 'transparent' ? TouchableOpacity : TouchableNativeFeedback;
 
   const containerStyles: StyleProp<ViewStyle> = [
     { width: wide ? '100%' : null },
@@ -91,13 +84,23 @@ function Button(props: Props) {
     />
   );
 
+  const ripple =
+    variant === 'contained' ? buttonVariant.label.color : buttonColor;
+
   return (
-    // @ts-ignore
-    <Touchable disabled={disabled || loading} {...rest}>
+    <TouchableNativeFeedback
+      disabled={disabled || loading}
+      background={TouchableNativeFeedback.Ripple(ripple, false)}
+      {...rest}
+    >
       {loading ? Loader : <View style={containerStyles}>{Label}</View>}
-    </Touchable>
+    </TouchableNativeFeedback>
   );
 }
 
 // @ts-ignore
-export default withTheme(Button);
+export default withTheme(Button) as typeof Button;
+
+// TODO:
+// - gray when disabled
+// - fix round  border

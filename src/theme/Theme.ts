@@ -24,14 +24,20 @@ export default function Theme(theme: typeof defaultTheme) {
     padding: scaler.scale(theme.spacing.padding),
   };
 
+  const border = {
+    width: theme.border.width,
+    radius: theme.border.radius,
+  };
+
   const Typography = typographyStyles({ font, platte });
-  const Button = buttonStyles({ font, spacing, platte });
+  const Button = buttonStyles({ font, spacing, platte, border });
 
   return {
     platte,
     font,
     spacing,
-    component: {
+    border,
+    components: {
       Typography,
       Button,
     },

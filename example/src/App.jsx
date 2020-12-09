@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
 import { ThemeProvider } from '@elasticui/react-native';
 
@@ -14,6 +16,8 @@ const customFonts = {
   bold: require('../assets/fonts/Poppins-Bold.ttf'),
   heavy: require('../assets/fonts/Poppins-Black.ttf'),
 };
+
+const Drawer = createDrawerNavigator();
 
 export default class App extends React.Component {
   state = {
@@ -35,7 +39,12 @@ export default class App extends React.Component {
     if (this.state.fontsLoaded) {
       return (
         <ThemeProvider theme={customTheme}>
-          <Button />
+          <NavigationContainer>
+            <Drawer.Navigator initialRouteName="Typography">
+              <Drawer.Screen name="Typography" component={Typography} />
+              <Drawer.Screen name="Button" component={Button} />
+            </Drawer.Navigator>
+          </NavigationContainer>
         </ThemeProvider>
       );
     } else {

@@ -1,4 +1,4 @@
-export { ThemeProvider, withTheme, useTheme, makeStyles } from './theme';
+export { ThemeProvider, withTheme, useTheme, makeStyle } from './theme';
 
 export { scaler } from './helpers';
 

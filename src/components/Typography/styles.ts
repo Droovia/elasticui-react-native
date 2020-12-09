@@ -12,7 +12,30 @@ interface TypographyStyles {
   };
 }
 
-export const typographyStyles = ({ font, platte }: TypographyStyles) => {
+export interface TypographyTheme {
+  variant: {
+    default: number;
+    caption: number;
+    h1: number;
+    h2: number;
+    h3: number;
+    h4: number;
+    h5: number;
+  };
+  color: {
+    default: string;
+    primary: string;
+    secondary: string;
+    success: string;
+    warn: string;
+    error: string;
+  };
+}
+
+export const typographyStyles = ({
+  font,
+  platte,
+}: TypographyStyles): TypographyTheme => {
   return {
     variant: {
       default: font.size,

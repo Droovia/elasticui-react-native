@@ -24,9 +24,18 @@ interface ButtonStyles {
     transparent: string;
     background: string;
   };
+  border: {
+    width: number;
+    radius: number;
+  };
 }
 
-export const buttonStyles = ({ font, spacing, platte }: ButtonStyles) => {
+export const buttonStyles = ({
+  font,
+  spacing,
+  platte,
+  border,
+}: ButtonStyles) => {
   return {
     variant: {
       contained: {
@@ -38,7 +47,6 @@ export const buttonStyles = ({ font, spacing, platte }: ButtonStyles) => {
       outlined: {
         container: {
           backgroundColor: platte.transparent,
-          borderColor: platte.primary,
         } as StyleProp<ViewStyle>,
         label: {} as StyleProp<TextStyle>,
       },
@@ -93,7 +101,7 @@ export const buttonStyles = ({ font, spacing, platte }: ButtonStyles) => {
     },
     shape: {
       curve: {
-        borderRadius: 3,
+        borderRadius: border.radius,
       } as StyleProp<ViewStyle>,
       plate: {
         borderRadius: 0,
@@ -111,7 +119,7 @@ export const buttonStyles = ({ font, spacing, platte }: ButtonStyles) => {
     },
     styles: {
       container: {
-        borderWidth: 1,
+        borderWidth: border.width,
       } as StyleProp<ViewStyle>,
       label: {
         fontFamily: 'medium',

@@ -1,13 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import { Wrapper } from '../common';
 import { Typography } from '@elasticui/react-native';
 
 const TypographyExample = () => {
   return (
-    <View
-      style={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}
-    >
+    <Wrapper center>
       <Typography>variant: default</Typography>
       <Typography variant="caption">variant: caption</Typography>
       <Typography variant="h1">variant: h1</Typography>
@@ -28,7 +27,7 @@ const TypographyExample = () => {
       <Typography family="medium">family: medium</Typography>
       <Typography family="bold">family: bold</Typography>
       <Typography family="heavy">family: heavy</Typography>
-    </View>
+    </Wrapper>
   );
 };
 

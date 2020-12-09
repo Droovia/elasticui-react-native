@@ -41,4 +41,8 @@ export default {
     margin: 4,
     padding: 6,
   },
+  border: {
+    width: 1.5,
+    radius: 3,
+  },
 };

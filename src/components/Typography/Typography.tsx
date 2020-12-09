@@ -23,15 +23,15 @@ function Typography(props: Props) {
   } = props;
 
   const styling: StyleProp<TextStyle> = {
-    fontSize: theme.component.Typography.variant[variant],
-    color: theme.component.Typography.color[color],
+    fontSize: theme.components.Typography.variant[variant],
+    color: theme.components.Typography.color[color],
     fontFamily: family,
   };
 
   return <NativeText style={[styling, style]}>{children}</NativeText>;
 }
 
-//@ts-ignore
+// @ts-ignore
 export default withTheme(Typography) as typeof Typography;
 
 // TODO:

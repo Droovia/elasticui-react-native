@@ -1,33 +1,26 @@
 import React from 'react';
-import { View } from 'react-native';
 
+import { Wrapper } from '../common';
 import { Button } from '@elasticui/react-native';
 
 const ButtonExample = () => {
   return (
-    <View
-      style={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}
-    >
-      <Button>variant: default</Button>
-      <Button variant="outlined">variant: outlined</Button>
-      <Button variant="transparent">variant: transparent</Button>
+    <Wrapper center>
+      <Button>CONTAINED</Button>
+      <Button variant="outlined">OUTLINED</Button>
+      <Button variant="transparent"> TRANSPARENT</Button>
 
-      <Button>size: default</Button>
-      <Button size="small" loading>
-        size: small
-      </Button>
-      <Button size="large">size: large</Button>
+      <Button size="small">SMALL</Button>
+      <Button size="large">LARGE</Button>
 
-      {/* <Button>shape: default</Button>
-      <Button shape="plate">shape: plate</Button>
-      <Button shape="round">shape: round</Button> */}
+      <Button shape="plate">PLATE</Button>
+      <Button shape="round">ROUND</Button>
 
-      {/* <Button>color: default</Button>
-      <Button color="secondary">color: secondary</Button>
-      <Button color="success">color: success</Button>
-      <Button color="warn">shape: warn</Button>
-      <Button color="error">shape: error</Button> */}
-    </View>
+      <Button color="secondary">SECONDARY</Button>
+      <Button color="success">SUCCESS</Button>
+      <Button color="warn">WARN</Button>
+      <Button color="error">ERROR</Button>
+    </Wrapper>
   );
 };
 
