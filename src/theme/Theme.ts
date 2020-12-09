@@ -1,6 +1,7 @@
 import { scaler } from '../helpers';
 
 import type defaultTheme from './Constant';
+import { typographyStyles } from '../components';
 
 export default function Theme(theme: typeof defaultTheme) {
   const platte = {
@@ -22,9 +23,12 @@ export default function Theme(theme: typeof defaultTheme) {
     padding: scaler.scale(theme.spacing.padding),
   };
 
+  const Typography = typographyStyles({ platte, font });
+
   return {
     platte,
     font,
     spacing,
+    Typography,
   };
 }

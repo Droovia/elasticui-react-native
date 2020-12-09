@@ -2,36 +2,36 @@ export default {
   mode: 'light' as 'light' | 'dark',
   platte: {
     primary: {
-      light: '',
-      dark: '',
+      light: '#4834d4',
+      dark: '#4834d4',
     },
     secondary: {
-      light: '',
-      dark: '',
+      light: '#22a6b3',
+      dark: '#22a6b3',
     },
     foreground: {
-      light: '',
-      dark: '',
+      light: '#000000',
+      dark: '#ffffff',
     },
     background: {
-      light: '',
-      dark: '',
+      light: '#ffffff',
+      dark: '#000000',
     },
     success: {
-      light: '',
-      dark: '',
+      light: '#00FF00',
+      dark: '#00FF00',
     },
     warn: {
-      light: '',
-      dark: '',
+      light: '#FFFF00',
+      dark: '#FFFF00',
     },
     error: {
-      light: '',
-      dark: '',
+      light: '#FF0000',
+      dark: '#FF0000',
     },
   },
   font: {
-    size: 16,
+    size: 14,
   },
   spacing: {
     margin: 4,
