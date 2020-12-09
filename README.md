@@ -17,7 +17,7 @@ React Native Elastic UI
 - Dialog 🕑
 - Bottom Sheet 🤔
 - Slider 🕑
-- Icons 🤔
+- Icons 🏃‍♂️
 
 ## Contributing
 

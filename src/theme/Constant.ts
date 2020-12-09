@@ -29,6 +29,10 @@ export default {
       light: '#FF0000',
       dark: '#FF0000',
     },
+    transparent: {
+      light: 'transparent',
+      dark: 'transparent',
+    },
   },
   font: {
     size: 14,

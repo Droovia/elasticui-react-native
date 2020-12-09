@@ -5,6 +5,7 @@ import * as Font from 'expo-font';
 import { ThemeProvider } from '@elasticui/react-native';
 
 import Typography from './components/Typography';
+import Button from './components/Button';
 
 const customFonts = {
   regular: require('../assets/fonts/Poppins-Regular.ttf'),
@@ -34,7 +35,7 @@ export default class App extends React.Component {
     if (this.state.fontsLoaded) {
       return (
         <ThemeProvider theme={customTheme}>
-          <Typography />
+          <Button />
         </ThemeProvider>
       );
     } else {

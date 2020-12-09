@@ -22,11 +22,9 @@ function Typography(props: Props) {
     family = 'regular',
   } = props;
 
-  console.log(theme.Typography.color[color]);
-
   const styling: StyleProp<TextStyle> = {
-    fontSize: theme.Typography.variant[variant],
-    color: theme.Typography.color[color],
+    fontSize: theme.component.Typography.variant[variant],
+    color: theme.component.Typography.color[color],
     fontFamily: family,
   };
 

@@ -1,7 +1,7 @@
 import { scaler } from '../helpers';
 
 import type defaultTheme from './Constant';
-import { typographyStyles } from '../components';
+import { typographyStyles, buttonStyles } from '../components';
 
 export default function Theme(theme: typeof defaultTheme) {
   const platte = {
@@ -12,6 +12,7 @@ export default function Theme(theme: typeof defaultTheme) {
     success: theme.platte.success[theme.mode],
     warn: theme.platte.warn[theme.mode],
     error: theme.platte.error[theme.mode],
+    transparent: theme.platte.transparent[theme.mode],
   };
 
   const font = {
@@ -23,12 +24,16 @@ export default function Theme(theme: typeof defaultTheme) {
     padding: scaler.scale(theme.spacing.padding),
   };
 
-  const Typography = typographyStyles({ platte, font });
+  const Typography = typographyStyles({ font, platte });
+  const Button = buttonStyles({ font, spacing, platte });
 
   return {
     platte,
     font,
     spacing,
-    Typography,
+    component: {
+      Typography,
+      Button,
+    },
   };
 }
