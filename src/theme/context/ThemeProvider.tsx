@@ -2,7 +2,7 @@ import React from 'react';
 import deepmerge from 'deepmerge';
 
 import { ThemeContext } from './Context';
-import defaultTheme from '../Constant';
+import defaultTheme from '../Materials';
 import Theme from '../Theme';
 
 type Props = {

@@ -1,4 +1,4 @@
-function shape(col: string, amt: number) {
+const shape = (col: string, amt: number) => {
   var usePound = false;
 
   if (col[0] === '#') {
@@ -30,8 +30,16 @@ function shape(col: string, amt: number) {
   var BB = B.toString(16).length === 1 ? '0' + B.toString(16) : B.toString(16);
 
   return (usePound ? '#' : '') + RR + GG + BB;
-} // code brutally copied from https://stackoverflow.com/a/37600815/11000016
+}; // code brutally copied from https://stackoverflow.com/a/37600815/11000016
+
+const modePlatte = (
+  mode: 'light' | 'dark',
+  color: { light: string; dark: string }
+) => {
+  return color[mode];
+};
 
 export default {
   shape,
+  modePlatte,
 };

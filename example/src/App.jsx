@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { StatusBar } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -39,8 +40,9 @@ export default class App extends React.Component {
     if (this.state.fontsLoaded) {
       return (
         <ThemeProvider theme={customTheme}>
+          <StatusBar hidden />
           <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Typography">
+            <Drawer.Navigator initialRouteName="Button">
               <Drawer.Screen name="Typography" component={Typography} />
               <Drawer.Screen name="Button" component={Button} />
             </Drawer.Navigator>

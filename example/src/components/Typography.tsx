@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 
 import { Wrapper } from '../common';
 import { Typography } from '@elasticui/react-native';
@@ -15,14 +14,12 @@ const TypographyExample = () => {
       <Typography variant="h4">variant: h4</Typography>
       <Typography variant="h5">variant: h5</Typography>
 
-      <Typography>color: default</Typography>
       <Typography color="primary">color: primary</Typography>
       <Typography color="secondary">color: secondary</Typography>
       <Typography color="success">color: success</Typography>
       <Typography color="warn">color: warn</Typography>
       <Typography color="error">color: error</Typography>
 
-      <Typography>family: regular</Typography>
       <Typography family="thin">family: thin</Typography>
       <Typography family="medium">family: medium</Typography>
       <Typography family="bold">family: bold</Typography>

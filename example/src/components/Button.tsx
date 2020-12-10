@@ -18,7 +18,9 @@ const ButtonExample = () => {
 
       <Button color="secondary">SECONDARY</Button>
       <Button color="success">SUCCESS</Button>
-      <Button color="warn">WARN</Button>
+      <Button color="warn" loading>
+        WARN
+      </Button>
       <Button color="error">ERROR</Button>
     </Wrapper>
   );

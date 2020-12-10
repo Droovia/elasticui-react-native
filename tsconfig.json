@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@elasticui/react-native": ["./src/index"],
-      "helpers/*": ["./src/helpers/*"]
+      "@elasticui/react-native": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

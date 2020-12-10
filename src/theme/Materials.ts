@@ -1,9 +1,11 @@
+import { scaler } from '../helpers';
+
 export default {
   mode: 'light' as 'light' | 'dark',
   platte: {
     primary: {
-      light: '#4834d4',
-      dark: '#4834d4',
+      light: '#1f5f8b',
+      dark: '#0984e3',
     },
     secondary: {
       light: '#22a6b3',
@@ -35,11 +37,12 @@ export default {
     },
   },
   font: {
-    size: 14,
+    size: scaler.scale(15),
+    family: 'regular' as 'regular' | 'thin' | 'medium' | 'bold' | 'heavy',
   },
   spacing: {
-    margin: 4,
-    padding: 6,
+    margin: scaler.scale(4),
+    padding: scaler.scale(6),
   },
   border: {
     width: 1.5,
