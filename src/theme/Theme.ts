@@ -1,4 +1,4 @@
-import { scaler, color } from '../helpers';
+import { color } from '../helpers';
 
 import { typographyStyles, buttonStyles } from '../components';
 
