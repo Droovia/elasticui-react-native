@@ -44,6 +44,7 @@ Share your ideas and feedbacks at [Github Discussion](https://github.com/Droovia
 - Bottom Sheet 🤔
 - Menu 🤔
 - Slider 🕑
+- Grid 🕑
 - Icons 🏃‍♂️
 
 ## Contributing
